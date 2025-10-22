@@ -1,0 +1,10 @@
+pytest
+selenium
+
+## по сути это если локально: 
+## pip install pytest
+## pip install selenium
+## git init
+## pip freeze > requirements.txt 
+
+## и чтобы каждый кто скачает все работало, сможет установить зависимости одной командочкой - pip install -r requirements.txt
