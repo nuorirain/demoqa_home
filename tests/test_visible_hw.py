@@ -6,24 +6,17 @@ def test_visible_accordion(driver):
     page = Accordion(driver)
     page.open()
 
-   
     section1 = page.find_element(page.section1_content)
     assert section1.is_displayed(), "Элемент #section1Content > p не виден!"
-
-   
     heading1 = page.find_element(page.section1_heading)
     heading1.click()
 
-   
     time.sleep(2)
-
-    
     try:
         section1 = page.find_element(page.section1_content)
         assert not section1.is_displayed(), "Элемент #section1Content > p всё ещё виден!"
     except NoSuchElementException:
         pass  
-
 
 def test_visible_accordion_default(driver):
     page = Accordion(driver)
@@ -40,4 +33,4 @@ def test_visible_accordion_default(driver):
             elem = page.find_element(locator)
             assert not elem.is_displayed(), f"❌ Элемент {locator} должен быть скрыт!"
         except NoSuchElementException:
-            pass  
+            pass 
