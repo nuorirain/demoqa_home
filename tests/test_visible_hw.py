@@ -27,7 +27,6 @@ def test_visible_accordion_default(driver):
         page.section2_content_2,
         page.section3_content
     ]
-
     for locator in elements:
         try:
             elem = page.find_element(locator)
